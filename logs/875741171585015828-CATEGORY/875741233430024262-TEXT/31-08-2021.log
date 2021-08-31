@@ -1,0 +1,58 @@
+2021-08-31 14:54:09 | [iPirie#8558] (436876982794452992) Content: 
+2021-08-31 19:49:02 | [iPirie#8558] (436876982794452992) ```
+COMMANDS = DARK_GREEN
+REACTION REMOVE ALL = LIGHT_GREY
+READY = DEFAULT
+ROLES = DARL_NAVY
+STICKERS = GREEN
+THREADS = YELLOW
+USER = GOLD
+WEBHOOKS = DARK_GOLD
+``` ➜ Content: ```
+COMMANDS = DARK_GREEN
+REACTION REMOVE ALL = LIGHT_GREY
+READY = DEFAULT
+ROLES = DARL_NAVY
+STICKERS = GREEN
+THREADS = YELLOW
+WEBHOOKS = DARK_GOLD
+```
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: !rr make
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Hello. Which channel would you like the message to be in?
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: <#875770034272751616>
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Alright, the channel is <#875770034272751616>. What would you like the message to say? Use a | to separate the title from the description, like so
+ ```This is a title | this is the description```
+You can also type `{roles}` to have it replaced with a list of each emoji and its associated role.
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: Year Roles | React with these emojis to get your current year role!
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Alright, I got a title and a description, would you like the message to have a color? Respond with the hex code or 'none' to skip.
+Not sure what a hex code is? Check out <https://htmlcolorcodes.com/color-picker/>.
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: 6B834F
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Alright, the message will look like this. Next up we will add roles
+The format for adding roles is emoji then the name of the role. When you're done, type 'done'
+**Example:** ```:smile: league of legends```  (CONTAINED EMBED)
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: a
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: The syntax for adding roles is emoji then role, like `:angel: role_name`
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: 1️⃣  first year
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: 2️⃣  second year
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: done
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) EMBED SENT
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: !rr make
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Hello. Which channel would you like the message to be in?
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: ➫𝗥𝗢𝗟𝗘𝗦
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Alright, the channel is <#875770034272751616>. What would you like the message to say? Use a | to separate the title from the description, like so
+ ```This is a title | this is the description```
+You can also type `{roles}` to have it replaced with a list of each emoji and its associated role.
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: Year Roles | Get your year roles below!
+
+1️⃣  First Year
+2️⃣  Second Year
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Alright, I got a title and a description, would you like the message to have a color? Respond with the hex code or 'none' to skip.
+Not sure what a hex code is? Check out <https://htmlcolorcodes.com/color-picker/>.
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: 6B834F
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) Content: Alright, the message will look like this. Next up we will add roles
+The format for adding roles is emoji then the name of the role. When you're done, type 'done'
+**Example:** ```:smile: league of legends```  (CONTAINED EMBED)
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: 1️⃣ first year
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: 2️⃣ second year
+2021-08-31 20:15:36 | [iPirie#8558] (436876982794452992) Content: done
+2021-08-31 20:15:36 | [Carl-bot#1536] (235148962103951360) EMBED SENT
