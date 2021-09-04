@@ -46,7 +46,7 @@ class Event {
 		if (oldMessage.content === newMessage.content || oldMessage.pinned !== newMessage.pinned) return;
 
 		const now = Date.now();
-		if (!fs.existsSync(`./logs/${oldMessage.channel.parentId}-CATEGORY/${oldMessage.channel.id}-TEXT/${dateFormat(now, 'dd-mm-yyyy')}.log`)) {
+		if (!fs.existsSync(`./logs/${oldMessage.channel.parentId}-CATEGORY/${oldMessage.channel.id}-TEXT/${dateFormat(Date.now(), 'dd-mm-yyyy')}.log`)) {
 			if (!fs.existsSync(`./logs/${oldMessage.channel.parentId}-CATEGORY`)) {
 				fs.mkdirSync(`./logs/${oldMessage.channel.parentId}-CATEGORY`);
 				this.client.logger.alert(`Category directory: ${oldMessage.channel.parentId}-CATEGORY does not exist creating...`);
@@ -55,28 +55,28 @@ class Event {
 				fs.mkdirSync(`./logs/${oldMessage.channel.parentId}-CATEGORY/${oldMessage.channel.id}-TEXT`);
 				this.client.logger.alert(`Category directory: ${oldMessage.channel.id}-TEXT does not exist creating...`);
 			}
-			fs.writeFileSync(`./logs/${oldMessage.channel.parentId}-CATEGORY/${oldMessage.channel.id}-TEXT/${dateFormat(now, 'dd-mm-yyyy')}.log`, '');
-			this.client.logger.alert(`Log file for TEXT: ${oldMessage.channel.id}-TEXT day ${dateFormat(now, 'dd-mm-yyyy')} does not exist creating...`);
+			fs.writeFileSync(`./logs/${oldMessage.channel.parentId}-CATEGORY/${oldMessage.channel.id}-TEXT/${dateFormat(Date.now(), 'dd-mm-yyyy')}.log`, '');
+			this.client.logger.alert(`Log file for TEXT: ${oldMessage.channel.id}-TEXT day ${dateFormat(Date.now(), 'dd-mm-yyyy')} does not exist creating...`);
 		}
 
 		if (newMessage.attachments.size !== 0) {
 			if (newMessage.content === '') {
-				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(now, 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ ${newMessage.attachments.first().attachment}`)}\n`);
+				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(Date.now(), 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ ${newMessage.attachments.first().attachment}`)}\n`);
 			}
 			else {
-				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(now, 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ Content: ${newMessage.content}  (${newMessage.attachments.first().attachment})`)}\n`);
+				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(Date.now(), 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ Content: ${newMessage.content}  (${newMessage.attachments.first().attachment})`)}\n`);
 			}
 		}
 		else if (newMessage.embeds.length !== 0) {
 			if (newMessage.content === '') {
-				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(now, 'dd-mm-yyyy')}.log`, this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ EMBED SENT\n`));
+				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(Date.now(), 'dd-mm-yyyy')}.log`, this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ EMBED SENT\n`));
 			}
 			else {
-				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(now, 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ Content: ${newMessage.content}  (CONTAINED EMBED)`)}\n`);
+				await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(Date.now(), 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ Content: ${newMessage.content}  (CONTAINED EMBED)`)}\n`);
 			}
 		}
 		else {
-			await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(now, 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ Content: ${newMessage.content}`)}\n`);
+			await fs.appendFileSync(`./logs/${newMessage.channel.parentId}-CATEGORY/${newMessage.channel.id}-TEXT/${dateFormat(Date.now(), 'dd-mm-yyyy')}.log`, `${this.client.logger.unformattedTime(`[${newMessage.author.tag}] (${newMessage.author.id}) ${oldMessage.content} ➜ Content: ${newMessage.content}`)}\n`);
 		}
 
 		const logEmbed = new Discord.MessageEmbed()
