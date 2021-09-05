@@ -64,7 +64,7 @@ class Event {
 				.setAuthor(oldMember.guild.name, oldMember.guild.iconURL({ dynamic: true }))
 				.setThumbnail(oldMember.user.displayAvatarURL({ dynamic: true }))
 				.setTitle('Member Update: `ROLE REMOVED`')
-				.setDescription(`<#${oldMember.id}> has had a **role** removed!`)
+				.setDescription(`<@${oldMember.id}> has had a **role** removed!`)
 				.addField('Role', `<@&${role.id}>`, true)
 				.setTimestamp();
 
